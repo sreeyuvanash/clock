@@ -1,12 +1,22 @@
 var hor,mi,sec;
+var bac1 , bac2;
+function preload(){
+
+  bac1 = loadImage("Screenshot (44).png");
+  bac2 = loadImage("Picture1.png");
+}
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES)
 }
 
 function draw() {
   background(0);
-  translate(200,200);
+    if(hor >= 6 && hor <= 18 ){
+    background (bac1)
+  }else  
+    background (bac2)
+  translate(windowWidth/2,windowHeight/2);
   rotate(-90);
   
   hor = hour();
@@ -17,17 +27,17 @@ function draw() {
   //noStroke();
   //text(hor + ':' + mi + ':' + sec,0,0)
   
-  strokeWeight(1)
+  strokeWeight(0.1)
   stroke("blue")
   noFill();
   ellipse(0,0,280,280)
   
-  strokeWeight(1)
+  strokeWeight(0.1)
   stroke("violet")
   noFill();
   ellipse(0,0,300,300)
   
-  strokeWeight(1)
+  strokeWeight(0.1)
   stroke("yellow")
   noFill();
   ellipse(0,0,260,260)
