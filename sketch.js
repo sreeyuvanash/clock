@@ -12,7 +12,7 @@ function setup() {
 
 function draw() {
   background(0);
-    if(hor >= 6 && hor <= 18 ){
+    if(hor = 6 && hor = 18 ){
     background (bac1)
   }else  
     background (bac2)
