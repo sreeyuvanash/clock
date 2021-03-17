@@ -1,5 +1,7 @@
 var hor,mi,sec;
 var bac1 , bac2;
+
+
 function preload(){
 
   bac1 = loadImage("Screenshot (44).png");
@@ -8,20 +10,32 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES)
+  
 }
 
 function draw() {
-  background(0);
-    if(hor = 6 && hor = 18 ){
-    background (bac1)
-  }else  
-    background (bac2)
-  translate(windowWidth/2,windowHeight/2);
-  rotate(-90);
   
+  background(0);
+  
+   
   hor = hour();
   mi  = minute();
   sec = second();
+  
+
+  
+  if(hor < 6 && hor > 18 ){
+    background (bac1)
+  }else     background (bac2)
+
+  
+ 
+    
+  
+  
+  translate(windowWidth/2,windowHeight/2);
+  rotate(-90);
+ 
   
   //fill(255);
   //noStroke();
@@ -32,12 +46,12 @@ function draw() {
   noFill();
   ellipse(0,0,280,280)
   
-  strokeWeight(0.1)
+  strokeWeight(1)
   stroke("violet")
   noFill();
   ellipse(0,0,300,300)
   
-  strokeWeight(0.1)
+  strokeWeight(1)
   stroke("yellow")
   noFill();
   ellipse(0,0,260,260)
@@ -83,6 +97,5 @@ function draw() {
   stroke(255);
   point(0,0)
   
-  
-   
+   drawSprites();
 }
